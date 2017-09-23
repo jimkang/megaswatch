@@ -1,0 +1,24 @@
+body {
+  font-family: "helvetica neue";
+}
+
+.container {
+  display: flex;
+}
+
+#spectrum > div {
+  width: 40px;
+  height: 20px;
+}
+
+#swatches {
+  margin-left: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#swatches > div {
+  width: 64px;
+  height: 64px;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "megaswatch",
+  "version": "1.0.0",
+  "description": "Helps you work out color schemes involving hundreds of colors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/megaswatch.git"
+  },
+  "keywords": [],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/megaswatch/issues"
+  },
+  "homepage": "https://github.com/jimkang/megaswatch",
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "uglify-es": "^3.1.1"
+  },
+  "dependencies": {
+    "d3-array": "^1.2.0",
+    "d3-color": "^1.0.3",
+    "d3-interpolate": "^1.1.5",
+    "d3-selection": "^1.1.0",
+    "lodash.flatten": "^4.4.0",
+    "probable": "^2.1.1",
+    "qs": "^6.3.0",
+    "route-state": "^1.1.2",
+    "seedrandom": "^2.4.3"
+  }
+}
