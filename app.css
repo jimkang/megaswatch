@@ -1,5 +1,5 @@
 body {
-  font-family: "helvetica neue";
+  font-family: futura, 'helvetica neue';
 }
 
 .container {
@@ -30,4 +30,15 @@ body {
 #json {
   border: 1px dashed black;
   padding: 1em;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
