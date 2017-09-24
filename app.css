@@ -1,5 +1,7 @@
 body {
   font-family: futura, 'helvetica neue';
+  color: #333;
+  margin: 1em;
 }
 
 .hidden {
@@ -12,15 +14,25 @@ body {
   background-color: #ffffee;
 }
 
+.form {
+  border: dashed 1px #333;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
 .form-pair {
   display: flex;
-  margin-top: 1em;
+  margin-top: 1.5em;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .form-pair label {
   margin-right: 1em;
+  text-align: right;
+  width: 10em;
 }
 
 .form-pair .value-container {
@@ -28,12 +40,10 @@ body {
   display: flex;
 }
 
-#number-of-colors-text {
-  margin-left: 1em;
-}
-
-#number-of-colors-field {
-  width: 200px;
+.slider {
+  margin-right: 2em;
+  width: 80%;
+  min-width: 200px;
 }
 
 .container {
@@ -62,7 +72,7 @@ body {
 }
 
 #json {
-  border: 1px dashed black;
+  border: 1px dashed #333;
   padding: 1em;
 }
 
@@ -75,4 +85,12 @@ body {
 .title {
   font-size: 1.5em;
   margin-bottom: 0.5em;
+}
+
+a {
+  color: black;
+}
+
+.explanation {
+  font-family: Garamond, Georgia;
 }

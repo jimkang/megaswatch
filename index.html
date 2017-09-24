@@ -7,11 +7,22 @@
 
 <div id="status-message" class="hidden"></div>
 
+<div class="title">Megaswatch!</div>
+
+<div class="explanation">
+  <p>
+    If you want readable palettes for data visualization, <a href="http://vrl.cs.brown.edu/color">Colorgorical</a> and <a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">Colorbrewer</a> are great resources. However, if you need a very large palette of, say, 300 colors, those aren't going to work. Frankly, I'm not sure there is anything that works really well, given that when you have that many colors, no matter how they're chosen, they resemble a random selection. But we can try!
+  </p>
+  <p>
+    Megaswatch generates large palettes that are at least evenly distributed in terms of human perception of hue by interpolating in the <a href="https://en.wikipedia.org/wiki/HCL_color_space">HCL</a> color space. You can move the sliders below to adjust chroma, luminence, and number of colors and see how it looks as A) a spectrum in order and B) applied to randomly shuffled blocks. Then, you can decide if anything works for you. <a href="https://github.com/jimkang/megaswatch">Source.</a>
+  </p>
+</div>
+
 <div class="form">
   <div class="form-pair">
     <label>Number of colors:</label>
     <div class="value-container">
-      <input type="range" id="numberOfColors-field" min="1" max="1000" value="300"></input>
+      <input type="range" class="slider" id="numberOfColors-field" min="5" max="1000" value="300"></input>
       <span id="numberOfColors-text">300</a>
     </div>
   </div>
@@ -19,7 +30,7 @@
   <div class="form-pair">
     <label>Chroma:</label>
     <div class="value-container">
-      <input type="range" id="chroma-field" min="0" max="150" value="85"></input>
+      <input type="range" class="slider" id="chroma-field" min="0" max="150" value="85"></input>
       <span id="chroma-text">85</a>
     </div>
   </div>
@@ -27,7 +38,7 @@
   <div class="form-pair">
     <label>Luminence:</label>
     <div class="value-container">
-      <input type="range" id="luminence-field" min="0" max="100" value="55"></input>
+      <input type="range" class="slider" id="luminence-field" min="0" max="100" value="55"></input>
       <span id="luminence-text">55</a>
     </div>
   </div>
