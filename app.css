@@ -2,6 +2,40 @@ body {
   font-family: futura, 'helvetica neue';
 }
 
+.hidden {
+  display: none !important;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#status-message {
+  background-color: #ffffee;
+}
+
+.form-pair {
+  display: flex;
+  margin-top: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-pair label {
+  margin-right: 1em;
+}
+
+.form-pair .value-container {
+  flex-grow: 1;
+  display: flex;
+}
+
+#number-of-colors-text {
+  margin-left: 1em;
+}
+
+#number-of-colors-field {
+  width: 200px;
+}
+
 .container {
   display: flex;
   flex-wrap: flex;

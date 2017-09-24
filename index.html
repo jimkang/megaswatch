@@ -5,6 +5,35 @@
 </head>
 <body>
 
+<div id="status-message" class="hidden"></div>
+
+<div class="form">
+  <div class="form-pair">
+    <label>Number of colors:</label>
+    <div class="value-container">
+      <input type="range" id="numberOfColors-field" min="1" max="1000" value="300"></input>
+      <span id="numberOfColors-text">300</a>
+    </div>
+  </div>
+
+  <div class="form-pair">
+    <label>Chroma:</label>
+    <div class="value-container">
+      <input type="range" id="chroma-field" min="0" max="150" value="85"></input>
+      <span id="chroma-text">85</a>
+    </div>
+  </div>
+
+  <div class="form-pair">
+    <label>Luminence:</label>
+    <div class="value-container">
+      <input type="range" id="luminence-field" min="0" max="100" value="55"></input>
+      <span id="luminence-text">55</a>
+    </div>
+  </div>
+
+</div>
+
 <div class="container">
   <div class="column">
     <div class="title">Spectrum</div>
@@ -14,7 +43,10 @@
     <div class="title">Randomly sorted swatches</div>
     <div id="swatches"></div>
   </div>
-  <pre id="json"></pre>
+  <div class="column">
+    <div class="title">Colors as JSON</div>
+    <pre id="json"></pre>
+  </div>
 </div>
   
 <script src="index.js"></script>
