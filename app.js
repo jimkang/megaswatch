@@ -5,6 +5,7 @@ var flatten = require('lodash.flatten');
 var createProbable = require('probable').createProbable;
 var RouteState = require('route-state');
 var render = require('./dom/render');
+var renderJSON = require('./dom/render-json');
 
 // Pulls in a seedrandom that is global (window.Math.seedrandom). 
 // On the other hand, it does not try to pull in the huge Node crypto module.
@@ -40,7 +41,9 @@ function followRoute(routeDict) {
 
   render({colors, rootId: 'spectrum'});
   render({colors: probable.shuffle(colors), rootId: 'swatches'});
+  renderJSON({colors});
 }
+
 
 function getColors({probable, numberOfColors = 300, }) {
   const segmentSize = ~~(numberOfColors/numberOfSegments);
@@ -56,8 +59,6 @@ function getColors({probable, numberOfColors = 300, }) {
   function interpolateInSegment(segmentIndex) {
     const startHue = segmentIndex * hueRangePerSegment;
     const endHue = (segmentIndex + 1) * hueRangePerSegment;
-    const chroma = 30 + probable.roll(70);
-    const luminence = probable.roll(80) + 50;
     var interpolator = interpolate.interpolateHcl(
       color.hcl(startHue, chroma, luminence),
       color.hcl(endHue, chroma, luminence)
