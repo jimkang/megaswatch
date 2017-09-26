@@ -48,7 +48,6 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: flex;
 }
 
 #spectrum > div {
@@ -57,9 +56,15 @@ body {
   border: 1px solid white;
 }
 
+.swatches-column {
+  width: 75%; 
+}
+
 #swatches {
   margin-left: 64px;
+  margin-right: 64px;
   min-width: 264px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -93,4 +98,27 @@ a {
 
 .explanation {
   font-family: Garamond, Georgia;
+}
+
+@media all and (max-width: 568px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  #swatches {
+    margin-left: 10px;
+    margin-right: 0;
+    width: 210px;
+    min-width: 210px;
+  }
+
+  #swatches > div {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+  }
+
+  .title {
+    font-size: 0.8em;
+  }
 }
