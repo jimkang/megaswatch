@@ -9,6 +9,3 @@ build:
 
 pushall:
 	git push origin gh-pages
-
-lint:
-	eslint .

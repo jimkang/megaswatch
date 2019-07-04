@@ -92,6 +92,6 @@ function getColors({numberOfColors = 300, chroma, luminence}) {
       color.hcl(startHue, chroma, luminence),
       color.hcl(endHue, chroma, luminence)
     );
-    return range(segmentSize).map(i => interpolator(i/segmentSize));
+    return range(segmentSize).map(i => interpolator(i/segmentSize)).map(s => color.hsl(s)).map(c => `hsla(${c.h.toFixed(2)}, ${(c.s * 100).toFixed(2)}%, ${(c.l * 100).toFixed(2)}%, ${c.opacity})`);
   }
 }
