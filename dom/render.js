@@ -1,6 +1,6 @@
 var d3 = require('d3-selection');
 
-function render({colors, rootId}) {
+function render({ colors, rootId }) {
   var itemRoot = d3.select('#' + rootId);
   var items = itemRoot.selectAll('div').data(colors);
   items.exit().remove();
