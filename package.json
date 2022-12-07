@@ -28,7 +28,7 @@
     "d3-selection": "^1.1.0",
     "lodash.flatten": "^4.4.0",
     "probable": "^2.1.1",
-    "qs": "^6.3.0",
+    "qs": "^6.5.3",
     "route-state": "^1.1.2",
     "seedrandom": "^2.4.3"
   }
